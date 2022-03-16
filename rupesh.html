@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assignment</title>
+  </head>
+  <script>
+    function switchClass() {
+        document.getElementById("box1").classList.toggle("boxAnimation" );
+        document.getElementById("box2").classList.toggle("box2Animation");
+        document.getElementById("box3").classList.toggle("box3Animation");
+        document.getElementById("box4").classList.toggle("box4Animation");
+        document.getElementById("box5").classList.toggle("box5Animation");
+    }
+  </script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      height: 90%;
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+    .buttonContainer {
+      display: flex;
+      width: 100%;
+      height: 10%;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+    }    
+    
+    .box {
+      position: relative;
+      width: 20%;
+      height: 100%;            
+    }
+    .boxAnimation {
+      animation-name:boxAni ;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate-reverse;            
+    }   
+    .box1Animation {
+      animation-name:boxAni ;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate-reverse;            
+    }   
+    .box2Animation {
+      animation-name:boxAni ;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate-reverse;            
+    }   
+    .box3Animation {
+      animation-name:boxAni ;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate-reverse;            
+    }    
+    .box4Animation {
+      animation-name:boxAni ;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate-reverse;            
+    }   
+    .box5Animation {
+      animation-name:boxAni ;
+      animation-duration: 12s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate-reverse;            
+    }
+    @keyframes boxAni {
+        0% {
+            height: 100%;
+        }
+        25% {
+            height: 50%;
+        }
+        50% {
+            height: 30%;
+        }
+        100% {
+            height: 10%;
+        }
+    }
+    .startButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: green;
+        border: none;
+        color: #FFFFFF;
+        font-size: 28px;
+        height: 50%;
+        width: 10%;
+        padding: 20px;
+        cursor: pointer;
+        margin: 5px;
+        transition: all 0.5s;
+    }
+    .startButton:focus {  
+        border: 2px solid rgb(0, 4, 255);
+        background: rgb(62, 235, 62); 
+    }
+    .endButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: red;
+        border: none;
+        color: #FFFFFF;
+        font-size: 28px;
+        height: 50%;
+        width: 10%;
+        padding: 20px;
+        cursor: pointer;
+        margin: 5px;
+        transition: all 0.5s;
+    }
+    .endButton:focus {  
+        border: 2px solid rgb(0, 4, 255);
+       background: rgb(255, 120, 120); 
+    }
+
+  </style>
+  <body>
+    <div class="container">      
+      <div class="box" style=" background: rgb(73, 1, 61) " id="box1"></div>
+      <div class="box"  style=" background: rgba(167, 88, 147, 0.753) " id="box2"></div>
+      <div class="box" style=" background: rgb(255, 77, 255) " id="box3"/></div>
+      <div class="box"  style=" background: rgb(255, 199, 96) "id="box4"/></div>
+      <div class="box" style=" background: rgb(255, 241, 41)"  id="box5"/></div>
+    </div>
+    <div class = "buttonContainer">
+        <button  class="startButton" onclick="switchClass()">Start</button>
+        <button  class="endButton"  onclick="switchClass()">Stop</button>
+    </div>
+  </body>
+</html>
